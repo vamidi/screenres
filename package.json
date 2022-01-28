@@ -1,6 +1,6 @@
 {
   "name": "screenres",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
@@ -8,13 +8,13 @@
     "install": "node-gyp rebuild"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
-    "node-gyp": "^3.0.3"
+    "mocha": "^9.2.0",
+    "node-gyp": "^8.4.1"
   },
   "dependencies": {
-    "bindings": "^1.2.1",
-    "minimist": "^1.1.1",
-    "nan": "^2.0.9"
+    "bindings": "^1.5.0",
+    "minimist": "^1.2.5",
+    "nan": "^2.15.0"
   },
   "gypfile": true,
   "description": "Cross platform screen resolution module and CLI too",
@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/davidmarkclements/screenres/issues"
   },
-  "homepage": "https://github.com/davidmarkclements/screenres"
+  "homepage": "https://github.com/davidmarkclements/screenres",
+  "engines": {
+    "node": ">= 12"
+  }
 }
