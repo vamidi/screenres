@@ -1,6 +1,6 @@
 {
-  "name": "screenres",
-  "version": "2.1.0",
+  "name": "@vamidicreations/screenres",
+  "version": "2.0.2",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
@@ -40,8 +40,5 @@
   "bugs": {
     "url": "https://github.com/davidmarkclements/screenres/issues"
   },
-  "homepage": "https://github.com/davidmarkclements/screenres",
-  "engines": {
-    "node": ">= 12"
-  }
+  "homepage": "https://github.com/davidmarkclements/screenres"
 }

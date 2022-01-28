@@ -22,7 +22,7 @@ void init(Local<Object>);
 
 NAN_METHOD(set) {
   Nan::HandleScope scope;
-  int code = changeRes(info[0]->Uint32Value(Nan::GetCurrentContext()).FromJust(), info[1]->Uint32Value(Nan::GetCurrentContext()).FromJust());
+  int code = changeRes(Nan::To<uint32_t>(info[0]).ToChecked(), Nan::To<uint32_t>(info[1]).ToChecked());
 
   if (!code) {
     info.GetReturnValue().SetUndefined();
@@ -35,14 +35,14 @@ NAN_METHOD(get) {
   Nan::HandleScope scope;
   Resolution res = fetchRes();
   Local<Array> arr = Nan::New<Array>(2);
-  arr->Set(Nan::GetCurrentContext(), 0, Nan::New<Number>(res.width));
-  arr->Set(Nan::GetCurrentContext(), 1, Nan::New<Number>(res.height));
+  Nan::Set(arr, 0, Nan::New<Number>(res.width));
+  Nan::Set(arr, 1, Nan::New<Number>(res.height));
   info.GetReturnValue().Set(arr);
 }
 
 NAN_MODULE_INIT (init) {
-  Nan::Set(target, Nan::New<String>("set").ToLocalChecked(), Nan::New<FunctionTemplate>(set)->GetFunction(Nan::GetCurrentContext()).ToLocalChecked());
-  Nan::Set(target, Nan::New<String>("get").ToLocalChecked(), Nan::New<FunctionTemplate>(get)->GetFunction(Nan::GetCurrentContext()).ToLocalChecked());
+  NAN_EXPORT(target, get);
+  NAN_EXPORT(target, set);
 }
 
 NODE_MODULE(screenres, init);
