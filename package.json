@@ -1,44 +1,46 @@
 {
   "name": "@vamidicreations/screenres",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "scripts": {
-    "configure": "node-gyp configure",
-    "build": "node-gyp build",
-    "test": "mocha",
-    "install": "node-gyp rebuild"
+	"configure": "node-gyp configure",
+	"build": "node-gyp build",
+	"test": "mocha",
+	"install": "node-gyp rebuild",
+	"publish": "npm publish --access=public",
+	"release": "npm run build && npm run publish"
   },
   "devDependencies": {
-    "mocha": "^9.2.0",
-    "node-gyp": "^8.4.1"
+	"mocha": "^9.2.0",
+	"node-gyp": "^8.4.1"
   },
   "dependencies": {
-    "bindings": "^1.5.0",
-    "minimist": "^1.2.5",
-    "nan": "^2.15.0"
+	"bindings": "^1.5.0",
+	"minimist": "^1.2.5",
+	"nan": "^2.15.0"
   },
   "gypfile": true,
   "description": "Cross platform screen resolution module and CLI too",
   "keywords": [
-    "screen",
-    "resolution",
-    "screen resolution",
-    "macOS",
-    "OS X",
-    "Windows",
-    "Linux"
+	"screen",
+	"resolution",
+	"screen resolution",
+	"macOS",
+	"OS X",
+	"Windows",
+	"Linux"
   ],
   "main": "index.js",
   "directories": {
-    "test": "test"
+	"test": "test"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/davidmarkclements/screenres.git"
+	"type": "git",
+	"url": "https://github.com/davidmarkclements/screenres.git"
   },
   "author": "David Mark Clements",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davidmarkclements/screenres/issues"
+	"url": "https://github.com/davidmarkclements/screenres/issues"
   },
   "homepage": "https://github.com/davidmarkclements/screenres"
 }

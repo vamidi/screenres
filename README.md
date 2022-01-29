@@ -7,7 +7,7 @@ Cross platform screen resolution module and CLI tool
 ### Programmatic
 
 ```sh
-$ npm install screenres --save
+$ npm install @vamidicreations/screenres --save
 ```
 
 #### get
@@ -21,13 +21,13 @@ console.log(sr.get()); // [1440, 900]
 
 ```js
 var sr = require('screenres');
-sr.set(800, 600));
+sr.set(800, 600);
 ```
 
 ### CLI
 
 ```sh
-$ npm install -g screenres
+$ npm install -g @vamidicreations/screenres
 ```
 
 #### help
